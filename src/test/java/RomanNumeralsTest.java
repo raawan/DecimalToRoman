@@ -14,7 +14,7 @@ public class RomanNumeralsTest {
 
     @Test
     public void two(){
-        Assert.assertEquals("II",RomanNumerals.decimalToRoman(1));
+        Assert.assertEquals("II",RomanNumerals.decimalToRoman(2));
     }
 
 }
