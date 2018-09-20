@@ -4,21 +4,21 @@ public class RomanNumerals {
     static String decimalToRoman(int decimal) {
         StringBuilder result = new StringBuilder();
         int remaining = decimal;
-        if (remaining >= 9) {
-            result.append("IX");
-            remaining -= 9;
-        }
-        if(remaining >= 5) {
-            result.append("V");
-            remaining-=5;
-        }
-        if(remaining >= 4) {
-            result.append("IV");
-            remaining-=4;
-        }
+        remaining = appendRomanNumerals(remaining, 9, "IX", result);
+        remaining = appendRomanNumerals(remaining, 5, "V", result);
+        remaining = appendRomanNumerals(remaining, 4, "IV", result);
         for(int i=0;i<remaining;i++) {
             result.append("I");
         }
         return result.toString();
+    }
+
+    private static int appendRomanNumerals(int decimal, int value, String romanDigits, StringBuilder builder) {
+        int result = decimal;
+        if (result >= value) {
+            builder.append(romanDigits);
+            result -= value;
+        }
+        return result;
     }
 }
