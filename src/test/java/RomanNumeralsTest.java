@@ -34,7 +34,7 @@ public class RomanNumeralsTest {
 
     @Test
     public void six() {
-        Assert.assertEquals("VI",RomanNumerals.decimalToRoman(5));
+        Assert.assertEquals("VI",RomanNumerals.decimalToRoman(6));
     }
 
 }

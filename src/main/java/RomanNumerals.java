@@ -2,14 +2,17 @@
 public class RomanNumerals {
 
     static String decimalToRoman(int decimal) {
-        if(decimal==5) {
-            return "V";
-        }
-        if(decimal==4) {
-            return "IV";
-        }
         StringBuilder result = new StringBuilder();
-        for(int i=0;i<decimal;i++) {
+        int remaining = decimal;
+        if(remaining >= 5) {
+            result.append("V");
+            remaining-=5;
+        }
+        if(remaining==4) {
+            result.append("IV");
+            remaining-=4;
+        }
+        for(int i=0;i<remaining;i++) {
             result.append("I");
         }
         return result.toString();
