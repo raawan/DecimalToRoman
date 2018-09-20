@@ -22,4 +22,9 @@ public class RomanNumeralsTest {
         Assert.assertEquals("III",RomanNumerals.decimalToRoman(3));
     }
 
+    @Test
+    public void four() {
+        Assert.assertEquals("IV",RomanNumerals.decimalToRoman(4));
+    }
+
 }
