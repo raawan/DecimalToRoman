@@ -37,4 +37,9 @@ public class RomanNumeralsTest {
         Assert.assertEquals("VI",RomanNumerals.decimalToRoman(6));
     }
 
+    @Test
+    public void nineIsXPrefixedByI() {
+        Assert.assertEquals("IX", RomanNumerals.decimalToRoman(9));
+    }
+
 }
