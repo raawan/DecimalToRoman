@@ -4,7 +4,7 @@ public class RomanNumerals {
     static String decimalToRoman(int decimal) {
         StringBuilder result = new StringBuilder();
         int remaining = decimal;
-        if (remaining == 9) {
+        if (remaining >= 9) {
             result.append("IX");
             remaining -= 9;
         }
@@ -12,7 +12,7 @@ public class RomanNumerals {
             result.append("V");
             remaining-=5;
         }
-        if(remaining==4) {
+        if(remaining >= 4) {
             result.append("IV");
             remaining-=4;
         }
