@@ -3,7 +3,7 @@
  */
 public class RomanNumerals {
 
-    public static String decimalToRoman(int decimal) {
-        return "";
+    static String decimalToRoman(int decimal) {
+        return "I";
     }
 }
