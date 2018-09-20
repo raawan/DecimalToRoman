@@ -12,4 +12,9 @@ public class RomanNumeralsTest {
         Assert.assertEquals("I",RomanNumerals.decimalToRoman(1));
     }
 
+    @Test
+    public void two(){
+        Assert.assertEquals("II",RomanNumerals.decimalToRoman(1));
+    }
+
 }
