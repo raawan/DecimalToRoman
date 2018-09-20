@@ -1,26 +1,23 @@
 
 public class RomanNumerals {
-    private static final int[]    VALUES  = { 9,    5,   4 };
-    private static final String[] SYMBOLS = { "IX", "V", "IV" };
+    private static final int[]    VALUES  = {10, 9,    5,   4 , 1};
+    private static final String[] SYMBOLS = { "X" ,"IX", "V", "IV" , "I"};
 
     static String decimalToRoman(int decimal) {
         StringBuilder result = new StringBuilder();
         int remaining = decimal;
-        for (int i = 0; i < VALUES.length; i++) {
+        for (int i = 0; i <VALUES.length; i++) {
             remaining = appendRomanNumerals(remaining, VALUES[i], SYMBOLS[i], result);
-        }
-        for(int i=0;i<remaining;i++) {
-            result.append("I");
         }
         return result.toString();
     }
 
     private static int appendRomanNumerals(int decimal, int value, String romanDigits, StringBuilder builder) {
-        int result = decimal;
-        if (result >= value) {
+        int temp = decimal;
+        while (temp >= value) {
             builder.append(romanDigits);
-            result -= value;
+            temp -= value;
         }
-        return result;
+        return temp;
     }
 }
