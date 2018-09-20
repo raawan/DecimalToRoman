@@ -2,6 +2,9 @@
 public class RomanNumerals {
 
     static String decimalToRoman(int decimal) {
+        if(decimal==5) {
+            return "V";
+        }
         if(decimal==4) {
             return "IV";
         }
